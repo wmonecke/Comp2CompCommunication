@@ -36,6 +36,12 @@
         console.log(id);
         eventBus.$emit('onShowDetails', this.servers[id]);
       }
+    },
+
+    created() {
+      eventBus.$on('onChangeServerStatus', (obj) => {
+        
+      });
     }
   }
 </script>
